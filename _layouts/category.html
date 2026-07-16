@@ -1,0 +1,20 @@
+---
+layout: default
+---
+<div class="wrapper">
+  <section class="hero">
+    <h1 class="hero-title">{{ page.title }}</h1>
+    {% if page.description %}<p class="hero-desc">{{ page.description }}</p>{% endif %}
+  </section>
+
+  <section class="post-list">
+    {% assign posts = site.categories[page.slug] %}
+    {% if posts and posts.size > 0 %}
+      {% for post in posts %}
+        {% include post-card.html post=post %}
+      {% endfor %}
+    {% else %}
+      <p class="empty">这个分类还没有文章。</p>
+    {% endif %}
+  </section>
+</div>

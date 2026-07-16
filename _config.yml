@@ -1,4 +1,63 @@
-theme: minima
-title: singleghost2's personal blog
-description: This is where I share cool stuff about my life
+# ── 站点基本信息 ──────────────────────────────
+title: 栈长的博客
+description: 记录计算机安全、影视观感与随笔杂谈
 author: singleghost2
+lang: zh-CN
+# 用户主页站点（singleghost2.github.io），根路径即站点根，无需 baseurl
+url: "https://singleghost2.github.io"
+github_username: singleghost2
+
+# ── 构建设置 ─────────────────────────────────
+markdown: kramdown
+highlighter: rouge
+permalink: /:categories/:title/
+timezone: Asia/Shanghai
+# 文章摘要以 <!--more--> 之前的内容为准（无则取首段）
+excerpt_separator: "<!--more-->"
+
+# GitHub Pages 白名单插件
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# ── 分类：英文 slug → 中文显示名 ──────────────
+# 文章 front matter 用 category: security|media|misc
+category_names:
+  security: 计算机安全
+  media: 看过的影视作品
+  misc: 杂谈
+
+# ── 顶部导航 ─────────────────────────────────
+nav:
+  - name: 首页
+    url: /
+  - name: 安全
+    url: /security/
+  - name: 影视
+    url: /media/
+  - name: 杂谈
+    url: /misc/
+  - name: 关于
+    url: /about/
+
+# ── 默认 front matter ────────────────────────
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: page
+
+# ── 构建排除 ─────────────────────────────────
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - README.md
+  - _prose.yml

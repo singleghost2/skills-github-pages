@@ -1,0 +1,55 @@
+prose:
+  # 打开 prose.io 后默认进入的目录（文章目录）
+  rooturl: "_posts"
+  siteurl: "https://singleghost2.github.io"
+  # 图片上传落点：正文里插入图片会提交到这里
+  media: "assets/img"
+  # 在 prose 文件列表里隐藏这些非文章文件，界面更清爽
+  ignore:
+    - _config.yml
+    - _prose.yml
+    - Gemfile
+    - Gemfile.lock
+    - README.md
+    - LICENSE
+    - about.md
+    - 404.html
+    - index.html
+    - _layouts
+    - _includes
+    - _sass
+    - categories
+
+  # 新建文章时的表单字段与默认 front matter
+  metadata:
+    _posts:
+      - name: "layout"
+        field:
+          element: "hidden"
+          value: "post"
+      - name: "title"
+        field:
+          element: "text"
+          label: "标题"
+          value: ""
+      - name: "date"
+        field:
+          element: "text"
+          label: "日期（YYYY-MM-DD）"
+          value: "CURRENT_DATETIME"
+      - name: "category"
+        field:
+          element: "select"
+          label: "分类"
+          options:
+            - name: "计算机安全"
+              value: "security"
+            - name: "看过的影视作品"
+              value: "media"
+            - name: "杂谈"
+              value: "misc"
+      - name: "description"
+        field:
+          element: "text"
+          label: "摘要（显示在列表页）"
+          value: ""

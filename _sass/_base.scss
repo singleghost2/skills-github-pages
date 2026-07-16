@@ -1,0 +1,73 @@
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: $font-body;
+  font-size: 16px;
+  line-height: 1.75;
+  color: $color-text;
+  background: $color-bg;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: $color-primary;
+  text-decoration: none;
+  &:hover { color: $color-primary-dark; text-decoration: underline; }
+}
+
+img { max-width: 100%; height: auto; border-radius: 6px; }
+
+h1, h2, h3, h4, h5, h6 { line-height: 1.3; font-weight: 700; color: $color-text; }
+
+// 行内代码
+code {
+  font-family: $font-mono;
+  font-size: 0.88em;
+  background: $color-bg-soft;
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  border: 1px solid $color-border;
+}
+
+// 代码块（安全类文章常用，深色便于阅读）
+pre {
+  background: #0f172a;
+  color: #e2e8f0;
+  padding: 1rem 1.2rem;
+  border-radius: $radius;
+  overflow-x: auto;
+  line-height: 1.55;
+  font-size: 0.9rem;
+  code {
+    background: none;
+    border: none;
+    padding: 0;
+    color: inherit;
+    font-size: inherit;
+  }
+}
+
+blockquote {
+  margin: 1.2rem 0;
+  padding: 0.5rem 1rem;
+  border-left: 4px solid $color-primary-light;
+  background: $color-bg-soft;
+  color: $color-text-muted;
+  p { margin: 0.3rem 0; }
+}
+
+hr { border: none; border-top: 1px solid $color-border; margin: 2rem 0; }
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.2rem 0;
+  font-size: 0.95rem;
+  th, td { border: 1px solid $color-border; padding: 0.5rem 0.75rem; text-align: left; }
+  th { background: $color-bg-soft; }
+}
+
+ul, ol { padding-left: 1.4rem; }
